@@ -12,10 +12,7 @@ export function BookContextProvider(props){
     useEffect(()=> {
         localStorage.setItem('books', JSON.stringify(books));
     }, [books])
-    useEffect(()=> {
-        localStorage.setItem('books', JSON.stringify(books));
-    }, [])
-
+    
     return(
         <BookContext.Provider value={{books, dispatch}}>
             { props.children }
